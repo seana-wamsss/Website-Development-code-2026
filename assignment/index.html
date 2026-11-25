@@ -7,27 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container navbar">
-            <a class="logo-mark" href="#home" aria-label="SkyNest home">SN</a>
-            <nav aria-label="Main navigation">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-<div class="hero" id="home">
-    <div class="row">
-        <div class="col-1">
+    <div class="container">
+    <div class="navbar">
+    <div class="logo">
+    <img src="images/logo.png" alt="SkyNest Logo">
+    </div>
+    </div>
+    </div>
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+</div>
+<div>
+    <div class = "row">
+        <div class = "col-1">
             <h1>Welcome to SkyNest</h1>
             <p>Your ideal co-living space for a modern lifestyle.</p>
             <a href="#services" class="btn">Explore Services</a>
         </div>
-    </div>
+    </div> 
+<a href="#about" class="btn">Explore About</a>
 </div>
 <div class="about-section" id="about">
     <h2>About SkyNest</h2>
@@ -37,96 +41,127 @@
 <div class="services-section" id="services">
     <h2>Our Services</h2>
     <div class="service">
-        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bright, furnished living space" loading="lazy">
         <h3>Fully Furnished Rooms</h3>
-        <p>Enjoy modern amenities and a comfortable, move-in-ready home.</p>
+        <p>Enjoy our fully furnished rooms with modern amenities, <br> ensuring a comfortable living experience.</p>
     </div>
     <div class="service">
-        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Welcoming shared lounge" loading="lazy">
         <h3>Community Events</h3>
-        <p>Meet your neighbours through regular events and shared activities.</p>
+        <p>Participate in regular community events <br> and workshops to connect with fellow residents.</p>
     </div>
     <div class="service">
-        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Comfortable modern apartment" loading="lazy">
         <h3>24/7 Support</h3>
-        <p>Our support team is available around the clock when you need help.</p>
+        <p>Our dedicated support team is available <br> around the clock to assist you with any needs or concerns.</p>
     </div>
 </div>
 <div class="contact-section" id="contact">
     <h2>Contact Us</h2>
     <p>Have questions or want to learn more? Reach out to us!</p>
     <form action="submit_form.php" method="post">
-        <div class="form-field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" autocomplete="name" required>
-        </div>
-        <div class="form-field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" autocomplete="email" required>
-        </div>
-        <div class="form-field">
-            <label for="phone">Phone number <span>(optional)</span></label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel">
-        </div>
-        <div class="form-field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Phone Number:</label>
+        <textarea id="message" name="message" required></textarea>
+        
         <button type="submit">Send Message</button>
     </form>
 </div>
-<div class="community-section">
-    <div class="row">
-        <div class="col-1">
-            <h2>Join the SkyNest Community</h2>
-            <p>Experience co-living that gives you room to connect, collaborate, and thrive.</p>
-            <a href="#contact" class="btn">Get in Touch</a>
-        </div>
-        <div class="col-2">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Bright shared living room" loading="lazy">
-        </div>
+<div class = "row">
+    <div class = "col-1">
+        <h2>Join the SkyNest Community</h2>
+        <p>Experience the best in co-living with SkyNest. <br> Connect, collaborate, and thrive in our vibrant community.</p>
+        <a href="#contact" class="btn">Get in Touch</a>
     </div>
 </div>
+<div class = "col-2">
+    <img src="images/community.jpg" alt="SkyNest Community">
+</div>
 
+<!------featured categories------->
 <div class="featured-categories">
     <h2>Featured Categories</h2>
     <div class="category">
-        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Modern apartment interior" loading="lazy">
+        <img src="images/category1.jpg" alt="Category 1">
         <h3>Modern Apartments</h3>
     </div>
     <div class="category">
-        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Shared living space" loading="lazy">
+        <img src="images/category2.jpg" alt="Category 2">
         <h3>Shared Living Spaces</h3>
     </div>
     <div class="category">
-        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Private room in a modern home" loading="lazy">
+        <img src="images/category3.jpg" alt="Category 3">
         <h3>Private Rooms</h3>
     </div>
 </div>
-<div class="featured-products">
+<!---------------Featured Products------------------>
+<div class = "featured-products">
     <h2>Featured Products</h2>
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Modern apartment interior" loading="lazy">
+    <div class="Modern Apartments">
+        <img src="images/product1.jpg" alt="Product 1">
         <h3>Modern Apartments</h3>
         <p>$299.99</p>
     </div>
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Shared living space" loading="lazy">
+    <div class="">
+        <img src="images/product2.jpg" alt="Product 2">
         <h3>Shared Living Spaces</h3>
         <p>$599.99</p>
     </div>
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Private room in a modern home" loading="lazy">
+    <div class="private-rooms">
+        <img src="images/product3.jpg" alt="Product 3">
         <h3>Private Rooms</h3>
         <p>$199.99</p>
-        <p>Includes the essential amenities for comfortable living.</p>
+        <p>Note: Prices are subject to change based on availability and location.</p>
+        <p> Private Rooms come with all essential amenities.</p>
     </div>
 </div>
+
+<div class="col-4">
+            <img src="images/product-3.jpg">
+            <h4>Mordern Apartments</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>$299.99</p>
+        </div>
+        <div class="col-4">
+            <img src="images/product-4.jpg">
+            <h4> Shared Living Spaces</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$599.99</p>
+        </div>
+        <div class="col-4">
+            <img src="images/product-4.jpg">
+            <h4> Private rooms</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$199.99</p>
+        </div>
+</div>
+
+<!--------------offer--------------->
 <div class="offer">
     <div class="small-container">
         <div class="row">
             <div class="col-2">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" class="offer-img" alt="Modern home interior" loading="lazy">
+                <img src="images/exclusive.png" class="offer-img">
             </div>
             <div class="col-2">
                 <p>Exclusively available on our Website</p>
@@ -141,6 +176,7 @@
         </div>
     </div>
 </div>
+<!-----------testimonials---------->
 <div class="testimonial">
     <div class="small-container">
         <div class="row">
@@ -164,22 +200,59 @@
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">SN</span>
-                <p>Comfortable co-living, made simple.</p>
+<div class="footer">
+<div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+                </div>
             </div>
-            <nav class="footer-links" aria-label="Footer navigation">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <div class="footer-col-2">
+                <img src="images/logo-white.png">
+                <p>Our Purpose Is To Sustainably Make th Pleasure and
+                     Benefits of Sports Accessible to the Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Usefull Links</h3>
+                <ul>
+                    <li>Help</li>
+                    <li>Accomodation</li>
+                    <li>Book Now</li>
+                    <li>Residency</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
         </div>
-        <p class="copyright">&copy; 2026 SkyNest Co-Living Spaces. All rights reserved.</p>
     </div>
-</footer>
+</div>
+</div>
+  <p>We are committed to protecting and respecting your privacy. <br>
+    We will only use your personal information to administer your account and provide <br>
+    the services requested.</p>              
+    <p>copy; 2026 SkyNest Co-Living Spaces. All rights reserved.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
