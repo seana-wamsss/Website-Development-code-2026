@@ -12,29 +12,107 @@
         <a class="back-link" href="index.html#home">&larr; Back to SkyNest</a>
         <section class="checkout-card" aria-labelledby="checkout-title">
             <p class="eyebrow">SkyNest Homes</p>
-            <h1 id="checkout-title">Unit checkout</h1>
-            <p id="unit-name" class="unit-name"></p>
-            <p id="unit-price" class="price"></p>
+            <h1 id="checkout-title">Choose your home</h1>
+            <div class="cash-warning" role="alert">
+                <strong>STRICTLY NO CASH PAYMENT ALLOWED.</strong>
+                <p>Use only verified electronic payment channels. Never hand cash to anyone.</p>
+            </div>
             <div class="demo-notice" role="note">
-                Demo only. Do not enter real login or payment details. This page does not
-                authenticate users, process payments, transmit, or save the information entered.
-                Use fictitious test values only.
+                Demo only. Do not enter real personal or payment details. This page does not
+                submit, transmit, or save information, and it does not process payments.
             </div>
 
-            <form id="login-form" autocomplete="off">
-                <h2>1. Sign in</h2>
-                <p class="step-copy">Demo sign-in only; no account is checked.</p>
-                <label for="login-email">Email</label>
-                <input id="login-email" type="email" placeholder="demo@example.com" required>
+            <form id="buyer-form" autocomplete="off">
+                <h2>1. Select housing and enter your details</h2>
+                <fieldset class="housing-catalog">
+                    <legend>Housing catalog</legend>
+                    <p class="step-copy">Choose one unit. Prices marked on request will be confirmed by SkyNest.</p>
+                    <div class="housing-options">
+                        <label class="housing-option">
+                            <input type="radio" name="housing-unit" value="condo" required>
+                            <span class="option-copy">
+                                <span class="option-title">Condo</span>
+                                <span class="option-description">Three-bedroom condo with two bathrooms.</span>
+                                <span class="option-price">$23,000</span>
+                            </span>
+                        </label>
+                        <label class="housing-option">
+                            <input type="radio" name="housing-unit" value="studio-apartment" required>
+                            <span class="option-copy">
+                                <span class="option-title">Studio Apartment</span>
+                                <span class="option-description">Furnished private studio with kitchenette.</span>
+                                <span class="option-price">Price on request</span>
+                            </span>
+                        </label>
+                        <label class="housing-option">
+                            <input type="radio" name="housing-unit" value="one-bedroom-apartment" required>
+                            <span class="option-copy">
+                                <span class="option-title">One-Bedroom Apartment</span>
+                                <span class="option-description">Separate bedroom and living area.</span>
+                                <span class="option-price">Price on request</span>
+                            </span>
+                        </label>
+                        <label class="housing-option">
+                            <input type="radio" name="housing-unit" value="shared-lounge" required>
+                            <span class="option-copy">
+                                <span class="option-title">Shared Lounge</span>
+                                <span class="option-description">Communal space for residents.</span>
+                                <span class="option-price">Price on request</span>
+                            </span>
+                        </label>
+                        <label class="housing-option">
+                            <input type="radio" name="housing-unit" value="co-living-suite" required>
+                            <span class="option-copy">
+                                <span class="option-title">Co-Living Suite</span>
+                                <span class="option-description">Private bedroom in a furnished shared home.</span>
+                                <span class="option-price">Price on request</span>
+                            </span>
+                        </label>
+                        <label class="housing-option">
+                            <input type="radio" name="housing-unit" value="furnished-private-room" required>
+                            <span class="option-copy">
+                                <span class="option-title">Furnished Private Room</span>
+                                <span class="option-description">Lockable room with shared home amenities.</span>
+                                <span class="option-price">Price on request</span>
+                            </span>
+                        </label>
+                        <label class="housing-option">
+                            <input type="radio" name="housing-unit" value="private-ensuite-room" required>
+                            <span class="option-copy">
+                                <span class="option-title">Private Ensuite Room</span>
+                                <span class="option-description">Private bedroom with its own bathroom.</span>
+                                <span class="option-price">Price on request</span>
+                            </span>
+                        </label>
+                    </div>
+                </fieldset>
 
-                <label for="login-password">Password</label>
-                <input id="login-password" type="password" placeholder="Demo password" required>
+                <section class="selection-summary" aria-live="polite">
+                    <h3>Your selection</h3>
+                    <p id="unit-name">Choose a home from the catalog.</p>
+                    <p id="unit-price" class="price">Price will appear here.</p>
+                </section>
 
-                <button type="submit">Continue to payment</button>
+                <div class="buyer-fields">
+                    <h3>Your contact details</h3>
+                    <label for="buyer-name">Full name</label>
+                    <input id="buyer-name" name="buyer-name" type="text" autocomplete="name" required>
+
+                    <label for="buyer-email">Email address</label>
+                    <input id="buyer-email" name="buyer-email" type="email" autocomplete="email" required>
+
+                    <label for="buyer-phone">Phone number</label>
+                    <input id="buyer-phone" name="buyer-phone" type="tel" autocomplete="tel" required>
+
+                    <label for="move-in-date">Preferred move-in date <span>(optional)</span></label>
+                    <input id="move-in-date" name="move-in-date" type="date">
+                </div>
+
+                <button type="submit">Continue to payment preview</button>
             </form>
 
             <form id="payment-form" autocomplete="off" hidden>
-                <h2>2. Payment details</h2>
+                <h2>2. Payment preview</h2>
                 <p class="step-copy">Choose a bank and enter fictitious card details to preview the flow.</p>
 
                 <label for="bank">Bank</label>
@@ -62,8 +140,60 @@
                     </div>
                 </div>
 
-                <button type="submit">Preview checkout</button>
+                <div class="payment-actions">
+                    <button class="secondary-button" id="edit-details" type="button">Back to housing details</button>
+                    <button type="submit">Preview checkout</button>
+                </div>
             </form>
+
+            <aside id="profile-receipt" class="profile-receipt" aria-labelledby="receipt-title" hidden>
+                <p class="profile-eyebrow">Demo profile</p>
+                <h2 id="receipt-title">Booking receipt</h2>
+                <p class="receipt-note">Preview only. This is not proof of payment, and no account login is connected.</p>
+                <dl class="receipt-details">
+                    <div>
+                        <dt>Booking reference</dt>
+                        <dd id="receipt-reference"></dd>
+                    </div>
+                    <div>
+                        <dt>Housing choice</dt>
+                        <dd id="receipt-unit"></dd>
+                    </div>
+                    <div>
+                        <dt>Price</dt>
+                        <dd id="receipt-price"></dd>
+                    </div>
+                    <div>
+                        <dt>Name</dt>
+                        <dd id="receipt-name"></dd>
+                    </div>
+                    <div>
+                        <dt>Email</dt>
+                        <dd id="receipt-email"></dd>
+                    </div>
+                    <div>
+                        <dt>Phone</dt>
+                        <dd id="receipt-phone"></dd>
+                    </div>
+                    <div>
+                        <dt>Preferred move-in</dt>
+                        <dd id="receipt-move-in"></dd>
+                    </div>
+                    <div>
+                        <dt>Bank selected</dt>
+                        <dd id="receipt-bank"></dd>
+                    </div>
+                    <div>
+                        <dt>Request date</dt>
+                        <dd id="receipt-date"></dd>
+                    </div>
+                    <div>
+                        <dt>Status</dt>
+                        <dd id="receipt-status">Preview only — no payment processed</dd>
+                    </div>
+                </dl>
+                <button class="receipt-print-button" id="print-receipt" type="button">Print receipt preview</button>
+            </aside>
             <p id="checkout-status" class="checkout-status" role="status" aria-live="polite"></p>
         </section>
     </main>
