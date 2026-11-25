@@ -502,11 +502,34 @@ body{
     box-shadow: 0 12px 28px rgba(80, 31, 57, 0.12);
 }
 
+.product-card > summary{
+    cursor: pointer;
+    list-style: none;
+}
+
+.product-card > summary::-webkit-details-marker{
+    display: none;
+}
+
+.product-card > summary:focus-visible{
+    outline: 2px solid #741849;
+    outline-offset: 5px;
+}
+
 .service h3,
 .category h3,
-.product-card h3{
+.product-card .product-title{
+    display: block;
     margin-bottom: 8px;
     color: #741849;
+    font-size: 1.17em;
+    font-weight: 700;
+}
+
+.product-price{
+    display: block;
+    color: #555;
+    font-size: 18px;
 }
 
 .service img,
@@ -518,6 +541,50 @@ body{
     margin-bottom: 14px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+.category-prompt{
+    display: inline-block;
+    margin-top: 12px;
+    color: #741849;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.available-listings{
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #f0dce6;
+}
+
+.available-listings h4{
+    color: #741849;
+}
+
+.listing-card{
+    padding: 14px;
+    border-radius: 10px;
+    background: #fff8fb;
+}
+
+.listing-card h5{
+    margin-bottom: 4px;
+    color: #4a3541;
+    font-size: 15px;
+}
+
+.listing-card p{
+    font-size: 14px;
+}
+
+.listing-link{
+    display: inline-block;
+    margin-top: 8px;
+    color: #741849;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .community-section .row{
