@@ -730,6 +730,112 @@ body{
     text-align: center;
 }
 
+.testimonial-section{
+    width: min(100% - 40px, 1100px);
+    margin: 64px auto;
+}
+
+.testimonial-layout{
+    display: grid;
+    grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.7fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.community-quote{
+    position: relative;
+    padding: 30px 26px 24px;
+    border: 1px solid #f0dce6;
+    border-radius: 18px;
+    background: #fff8fb;
+    box-shadow: 0 16px 36px rgba(80, 31, 57, 0.12);
+}
+
+.quote-mark{
+    display: block;
+    height: 42px;
+    color: #c77b9d;
+    font-family: Georgia, serif;
+    font-size: 64px;
+    line-height: 1;
+}
+
+.community-quote h2,
+.partnerships h2{
+    margin: 8px 0 14px;
+    color: #741849;
+}
+
+.community-quote blockquote{
+    margin: 0;
+}
+
+.community-quote blockquote p{
+    color: #5d5159;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.quote-rating{
+    margin: 14px 0 0;
+    color: #a25478;
+    letter-spacing: 3px;
+}
+
+.partnerships{
+    padding: 12px 0;
+}
+
+.partnership-eyebrow,
+.partner-type{
+    color: #741849;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.partnership-eyebrow{
+    margin: 0;
+}
+
+.partnerships h2{
+    margin: 4px 0;
+}
+
+.partnership-note{
+    margin-bottom: 20px;
+    color: #6b6268;
+    font-size: 14px;
+}
+
+.partner-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.partner-card{
+    min-width: 0;
+    padding: 20px 16px;
+    border: 1px solid #e8dce2;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(80, 31, 57, 0.06);
+}
+
+.partner-card h3{
+    margin: 10px 0 8px;
+    color: #4a3541;
+    font-size: 18px;
+}
+
+.partner-card p{
+    margin: 0;
+    color: #625a60;
+    font-size: 14px;
+}
+
 @media only screen and (max-width: 800px){
     .navbar nav ul{
         position: static;
@@ -744,6 +850,14 @@ body{
 
     .footer-content{
         align-items: flex-start;
+    }
+
+    .testimonial-layout{
+        grid-template-columns: 1fr;
+    }
+
+    .community-quote{
+        max-width: 520px;
     }
 }
 
@@ -771,7 +885,8 @@ body{
     .services-section,
     .contact-section,
     .featured-categories,
-    .featured-products{
+    .featured-products,
+    .testimonial-section{
         width: calc(100% - 28px);
         margin: 28px auto;
         padding: 24px 18px;
@@ -802,5 +917,9 @@ body{
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .partner-grid{
+        grid-template-columns: 1fr;
     }
 }
