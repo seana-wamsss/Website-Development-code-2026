@@ -85,6 +85,10 @@ form{
     gap: 10px;
 }
 
+form[hidden]{
+    display: none;
+}
+
 form h2{
     margin: 0;
     color: #3e343b;
