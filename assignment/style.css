@@ -502,23 +502,28 @@ body{
     box-shadow: 0 12px 28px rgba(80, 31, 57, 0.12);
 }
 
-.product-card > summary{
+.expandable-category > summary{
     cursor: pointer;
     list-style: none;
 }
 
-.product-card > summary::-webkit-details-marker{
+.expandable-category > summary::-webkit-details-marker{
     display: none;
 }
 
-.product-card > summary:focus-visible{
+.expandable-category > summary:focus-visible{
     outline: 2px solid #741849;
     outline-offset: 5px;
 }
 
 .service h3,
 .category h3,
-.product-card .product-title{
+.product-card h3{
+    margin-bottom: 8px;
+    color: #741849;
+}
+
+.expandable-category .category-title{
     display: block;
     margin-bottom: 8px;
     color: #741849;
@@ -526,10 +531,8 @@ body{
     font-weight: 700;
 }
 
-.product-price{
-    display: block;
+.product-card p{
     color: #555;
-    font-size: 18px;
 }
 
 .service img,
@@ -544,7 +547,7 @@ body{
 }
 
 .category-prompt{
-    display: inline-block;
+    display: block;
     margin-top: 12px;
     color: #741849;
     font-size: 14px;
