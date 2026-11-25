@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condo Checkout | SkyNest</title>
+    <link rel="stylesheet" href="condo-checkout.css">
+    <script src="condo-checkout.js" defer></script>
+</head>
+<body>
+    <main class="checkout-shell">
+        <a class="back-link" href="index.html#home">&larr; Back to SkyNest</a>
+        <section class="checkout-card" aria-labelledby="checkout-title">
+            <p class="eyebrow">SkyNest Condos</p>
+            <h1 id="checkout-title">Condo checkout</h1>
+            <p class="price">$23,000</p>
+            <div class="demo-notice" role="note">
+                Demo only. Do not enter real login or payment details. This page does not
+                authenticate users, process payments, transmit, or save the information entered.
+                Use fictitious test values only.
+            </div>
+
+            <form id="login-form" autocomplete="off">
+                <h2>1. Sign in</h2>
+                <p class="step-copy">Demo sign-in only; no account is checked.</p>
+                <label for="login-email">Email</label>
+                <input id="login-email" type="email" placeholder="demo@example.com" required>
+
+                <label for="login-password">Password</label>
+                <input id="login-password" type="password" placeholder="Demo password" required>
+
+                <button type="submit">Continue to payment</button>
+            </form>
+
+            <form id="payment-form" autocomplete="off" hidden>
+                <h2>2. Payment details</h2>
+                <p class="step-copy">Choose a bank and enter fictitious card details to preview the flow.</p>
+
+                <label for="bank">Bank</label>
+                <select id="bank" required>
+                    <option value="">Choose a bank</option>
+                    <option>Equity Bank</option>
+                    <option>KCB</option>
+                    <option>Co-operative Bank</option>
+                </select>
+
+                <label for="cardholder">Name on card</label>
+                <input id="cardholder" type="text" placeholder="Demo Cardholder" required>
+
+                <label for="card-number">Card number</label>
+                <input id="card-number" type="text" inputmode="numeric" placeholder="Test number only" maxlength="23" required>
+
+                <div class="field-row">
+                    <div>
+                        <label for="expiry">Expiry date</label>
+                        <input id="expiry" type="text" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div>
+                        <label for="security-code">Security code</label>
+                        <input id="security-code" type="password" inputmode="numeric" placeholder="Test code" maxlength="4" required>
+                    </div>
+                </div>
+
+                <button type="submit">Preview checkout</button>
+            </form>
+            <p id="checkout-status" class="checkout-status" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+</body>
+</html>
